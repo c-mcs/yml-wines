@@ -1,0 +1,49 @@
+prefixes:
+  data: https://w3id.org/italia/lombardia/data/
+  vino: http://w3id.org/food/ontology/disciplinare-vino/
+  upper: http://w3id.org/food/ontology/disciplinare-upper/
+
+sources:
+  vino_source:
+    access: "vini_docg.csv" # https://www.buonalombardia.regione.lombardia.it/wps/wcm/connect/e9e233ff-ff18-407a-bfa1-7d1300798619/Vini+DOCG+Regione+Lombardia.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-e9e233ff-ff18-407a-bfa1-7d1300798619-mD9j2WN
+    referenceFormulation: "csv"
+
+mappings:
+  vino_mapping:
+    sources:
+      - vino_source
+    s: "data:$(denominazione)" # applica fn:slugify
+    po:
+      - [a,"vino:Vino"]
+      - ["foaf:name","$(name)"]
+      - ["rdfs:label", "Vino $(name)-$(tipologia)",it~lang] # concatena le colonne nome e tipologia se ci sono
+      - ["upper:haTipologia","data:tipo/$(tipologia)"]
+      - ["rdfs:label","$(name)-$(tipologia)", en~lang] # vediamo se fare condition per tipologia in inglese
+      - ["upper:haDenominazione", "data:denominazione/vino-$(denominazione)"]
+      - ["upper:haMateriaPrima", "data:descrizione-materia-prima/$(vitigni)"] # splitta su vitigni
+  
+  tipologia_mapping:
+    sources:
+      - vino_source
+    s: "data:tipo/$(tipologia)"
+    po:
+      - ["rdfs:label", "Tipologia vino '$(tipologia)'", it~lang]
+      - ["upper:siRiferisceA", "data:denominazione/vino-$(denominazione)"]
+
+  denominazione_mapping:
+    sources:
+      - vino_source
+    s: "data:denominazione/vino-$(denominazione)"
+    po:
+      - ["rdfs:label", "Denominazione $(menzione) vino '$(denominazione)'", it~lang]
+      - ["rdfs:label", "Wine $(menzione) protected name '$(denominazione)'", en~lang]
+      - ["upper:haLuogoDiProduzione", "data:province/$(provincia)"] # splitta su provincia
+
+  materia_prima_mapping:
+    sources:
+      - vino_source
+    s: "data:descrizione-materia-prima/$(vitigni)" # fare hash
+    po:
+      - ["rdfs:label", "Vitigno $(vitigni)", it~lang]
+      - ["rdfs:label", "Grape variety $(vitigni)", en~lang]
+      
