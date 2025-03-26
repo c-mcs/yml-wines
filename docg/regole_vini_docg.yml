@@ -1,0 +1,150 @@
+prefixes:
+  data: "https://w3id.org/italia/lombardia/data/"
+  vino: "http://w3id.org/food/ontology/disciplinare-vino/"
+  upper: "http://w3id.org/food/ontology/disciplinare-upper/"
+  fno: "https://w3id.org/imec/idlab/function#"
+  l0: "https://w3id.org/italia/onto/l0/"
+  den: "http://w3id.org/food/ontology/denominazione-italiana/"
+
+sources:
+  vino_source:
+    access: "vini_docg.csv" # Fonte dati CSV
+    referenceFormulation: "csv"
+
+mappings:
+  vino_mapping:
+    sources:
+      - vino_source
+    s:
+      function: fno:concat
+      parameters:
+        - [fno:str, "data:prodotto/"]
+        - parameter: fno:otherStr
+          value: 
+            function: fno:slugify
+            parameters:
+            - [fno:str, "$(denominazione)-$(tipologia)"]
+      type: iri  
+    po:
+    - [a, "vino:Vino"]
+    - [a, "upper:Prodotto"]
+    - ["l0:name", "$(denominazione)"]
+    - ["rdfs:label", "Vino $(denominazione) $(tipologia)", it~lang] # Evita trattini extra
+    - ["rdfs:label", "Wine $(denominazione) $(tipologia)", en~lang]
+    - ["upper:haTipologia", "data:tipo/vino-$(tipologia)~iri"]
+    - p: "upper:haDenominazione"
+      o:
+        function: fno:concat
+        parameters:
+          - [fno:str, "data:denominazione/vino-"]
+          - parameter: fno:otherStr
+            value: 
+              function: fno:slugify
+              parameters:
+              - [fno:str, "$(denominazione)"]
+        type: iri
+    - p: "upper:haDescrizione"
+      o:
+        function: fno:concat
+        parameters:
+          - [fno:str, "data:descrizione-materia-prima/"]
+          - parameter: fno:otherStr
+            value: 
+              function: fno:slugify
+              parameters:
+              - [fno:str, "$(vitigni)"]
+        type: iri
+
+  tipologia_mapping:
+    sources:
+      - vino_source
+    s: "data:tipo/vino-$(tipologia)"
+    po:
+    - ["rdfs:label", "Tipologia vino '$(tipologia)'", it~lang]
+    - [a, vino:TipologiaVino]
+    - [a, upper:Tipologia]
+    - p: "upper:siRiferisceA"
+      o: 
+        function: fno:concat
+        parameters:
+          - [fno:str, "data:prodotto/vino-"]
+          - parameter: fno:otherStr
+            value: 
+              function: fno:slugify
+              parameters:
+              - [fno:str, "$(denominazione)-$(tipologia)"]
+        type: iri
+
+  denominazione_mapping:
+    sources:
+      - vino_source
+    s:
+      function: fno:concat
+      parameters:
+        - [fno:str, "data:denominazione/vino-"]
+        - parameter: fno:otherStr
+          value: 
+            function: fno:slugify
+            parameters:
+            - [fno:str, "$(denominazione)"]
+      type: iri
+    po:
+    - [a, "den:DenominazioneOrigineControllataGarantita"]
+    - ["rdfs:label", "Denominazione $(menzione) vino '$(denominazione)'", it~lang]
+    - ["rdfs:label", "Wine $(menzione) protected name '$(denominazione)'", en~lang]
+    - p: "upper:haLuogoDiProduzione"
+      o:
+        function: fno:concat
+        parameters:
+          - [fno:str, "data:province/"]
+          - parameter: fno:otherStr
+            value: 
+              function: fno:slugify
+              parameters:
+              - [fno:str, "$(provincia)"]
+        type: iri
+
+  descrizione_materia_prima_mapping:
+    sources:
+      - vino_source
+    s: 
+      function: fno:concat
+      parameters:
+        - [fno:str, "data:descrizione-materia-prima/vino-"]
+        - parameter: fno:otherStr
+          value: 
+            function: fno:slugify
+            parameters:
+            - [fno:str, "$(denominazione)"]
+      type: iri
+    po:
+    - [a, "upper:DescrizioneMateriaPrima"]
+    - ["rdfs:label", "Vitigno $(vitigni)", it~lang]
+    - p: "upper:haMateriaPrima"
+      o:
+        function: fno:concat
+        parameters:
+          - [fno:str, "data:materia-prima/vitigno-"]
+          - parameter: fno:otherStr
+            value: 
+              function: fno:slugify
+              parameters:
+              - [fno:str, "$(materia prima)"]
+        type: iri
+
+    materia_prima_mapping:
+      sources:
+        - vino_source
+      s:
+        function: fno:concat
+        parameters:
+          - [fno:str, "data:materia-prima/vitigno-"]
+          - parameter: fno:otherStr
+            value: 
+              function: fno:slugify
+              parameters:
+              - [fno:str, "$(vitigno)"]
+        type: iri
+      po:
+      - [a, "upper:MateriaPrima"]
+      - ["rdfs:label", "Vitigno $(materia prima)", it~lang]

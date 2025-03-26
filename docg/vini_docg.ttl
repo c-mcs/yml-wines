@@ -1,0 +1,122 @@
+@prefix : <http://mapping.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix data: <https://w3id.org/italia/lombardia/data/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix den: <http://w3id.org/food/ontology/denominazione-italiana/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/imec/idlab/function#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix upper: <http://w3id.org/food/ontology/disciplinare-upper/> .
+@prefix vino: <http://w3id.org/food/ontology/disciplinare-vino/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-franciacorta> a den:DenominazioneOrigineControllataGarantita;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/bs>;
+  rdfs:label "Wine DOCG protected name 'Franciacorta'"@en, "Denominazione DOCG vino 'Franciacorta'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-oltrepo-pavese-metodo-classico>
+  a den:DenominazioneOrigineControllataGarantita;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/pv>;
+  rdfs:label "Wine DOCG protected name 'Oltrepo Pavese metodo classico'"@en, "Denominazione DOCG vino 'Oltrepo Pavese metodo classico'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-scanzo-o-moscato-di-scanzo>
+  a den:DenominazioneOrigineControllataGarantita;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/bg>;
+  rdfs:label "Wine DOCG protected name 'Scanzo o Moscato di Scanzo'"@en, "Denominazione DOCG vino 'Scanzo o Moscato di Scanzo'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-sforzato-di-valtellina-o-sfursat-di-valtellina>
+  a den:DenominazioneOrigineControllataGarantita;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/so>;
+  rdfs:label "Wine DOCG protected name 'Sforzato di Valtellina o Sfursat di Valtellina'"@en,
+    "Denominazione DOCG vino 'Sforzato di Valtellina o Sfursat di Valtellina'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-valtellina-superiore> a
+    den:DenominazioneOrigineControllataGarantita;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/so>;
+  rdfs:label "Wine DOCG protected name 'Valtellina Superiore'"@en, "Denominazione DOCG vino 'Valtellina Superiore'"@it .
+
+<https://w3id.org/italia/lombardia/data/descrizione-materia-prima/vino-franciacorta>
+  a upper:DescrizioneMateriaPrima;
+  upper:haMateriaPrima <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-chardonnay>,
+    <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-pinot-bianco>, <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-pinot-nero>;
+  rdfs:label "Vitigno Chardonnay e/o Pinot nero"@it, "Vitigno Pinot bianco (max 50%)"@it .
+
+<https://w3id.org/italia/lombardia/data/descrizione-materia-prima/vino-oltrepo-pavese-metodo-classico>
+  a upper:DescrizioneMateriaPrima;
+  upper:haMateriaPrima <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-chardonnay>,
+    <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-pinot-bianco>, <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-pinot-grigio>,
+    <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-pinot-nero>;
+  rdfs:label "Vitigno  Chardonnay"@it, "Vitigno Pinot Grigio e Pinot Bianco"@it, "Vitigno Pinot nero (min 70%)"@it .
+
+<https://w3id.org/italia/lombardia/data/descrizione-materia-prima/vino-scanzo-o-moscato-di-scanzo>
+  a upper:DescrizioneMateriaPrima;
+  upper:haMateriaPrima <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-moscato-di-scanzo>;
+  rdfs:label "Vitigno Moscato di Scanzo (100%)"@it .
+
+<https://w3id.org/italia/lombardia/data/descrizione-materia-prima/vino-sforzato-di-valtellina-o-sfursat-di-valtellina>
+  a upper:DescrizioneMateriaPrima;
+  upper:haMateriaPrima <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-nebbiolo>;
+  rdfs:label "Vitigno Nebbiolo (min 90%)"@it .
+
+<https://w3id.org/italia/lombardia/data/descrizione-materia-prima/vino-valtellina-superiore>
+  a upper:DescrizioneMateriaPrima;
+  upper:haMateriaPrima <https://w3id.org/italia/lombardia/data/materia-prima/vitigno-nebbiolo>;
+  rdfs:label "Vitigno Nebbiolo (min 90%)"@it .
+
+<https://w3id.org/italia/lombardia/data/prodotto/franciacorta-spumante> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-franciacorta>;
+  upper:haDescrizione <https://w3id.org/italia/lombardia/data/descrizione-materia-prima/chardonnay-e-o-pinot-nero>,
+    <https://w3id.org/italia/lombardia/data/descrizione-materia-prima/pinot-bianco-max-50>;
+  upper:haTipologia <https://w3id.org/italia/lombardia/data/tipo/vino-spumante>;
+  rdfs:label "Wine Franciacorta spumante"@en, "Vino Franciacorta spumante"@it;
+  l0:name "Franciacorta" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/oltrepo-pavese-metodo-classico-spumante>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-oltrepo-pavese-metodo-classico>;
+  upper:haDescrizione <https://w3id.org/italia/lombardia/data/descrizione-materia-prima/chardonnay>,
+    <https://w3id.org/italia/lombardia/data/descrizione-materia-prima/pinot-grigio-e-pinot-bianco>,
+    <https://w3id.org/italia/lombardia/data/descrizione-materia-prima/pinot-nero-min-70>;
+  upper:haTipologia <https://w3id.org/italia/lombardia/data/tipo/vino-spumante>;
+  rdfs:label "Wine Oltrepo Pavese metodo classico spumante"@en, "Vino Oltrepo Pavese metodo classico spumante"@it;
+  l0:name "Oltrepo Pavese metodo classico" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/scanzo-o-moscato-di-scanzo-rosso>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-scanzo-o-moscato-di-scanzo>;
+  upper:haDescrizione <https://w3id.org/italia/lombardia/data/descrizione-materia-prima/moscato-di-scanzo-100>;
+  upper:haTipologia <https://w3id.org/italia/lombardia/data/tipo/vino-rosso>;
+  rdfs:label "Wine Scanzo o Moscato di Scanzo rosso"@en, "Vino Scanzo o Moscato di Scanzo rosso"@it;
+  l0:name "Scanzo o Moscato di Scanzo" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/sforzato-di-valtellina-o-sfursat-di-valtellina-rosso>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-sforzato-di-valtellina-o-sfursat-di-valtellina>;
+  upper:haDescrizione <https://w3id.org/italia/lombardia/data/descrizione-materia-prima/nebbiolo-min-90>;
+  upper:haTipologia <https://w3id.org/italia/lombardia/data/tipo/vino-rosso>;
+  rdfs:label "Wine Sforzato di Valtellina o Sfursat di Valtellina rosso"@en, "Vino Sforzato di Valtellina o Sfursat di Valtellina rosso"@it;
+  l0:name "Sforzato di Valtellina o Sfursat di Valtellina" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/valtellina-superiore-rosso> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-valtellina-superiore>;
+  upper:haDescrizione <https://w3id.org/italia/lombardia/data/descrizione-materia-prima/nebbiolo-min-90>;
+  upper:haTipologia <https://w3id.org/italia/lombardia/data/tipo/vino-rosso>;
+  rdfs:label "Wine Valtellina Superiore rosso"@en, "Vino Valtellina Superiore rosso"@it;
+  l0:name "Valtellina Superiore" .
+
+<https://w3id.org/italia/lombardia/data/tipo/vino-rosso> a upper:Tipologia, vino:TipologiaVino;
+  upper:siRiferisceA <https://w3id.org/italia/lombardia/data/prodotto/vino-scanzo-o-moscato-di-scanzo-rosso>,
+    <https://w3id.org/italia/lombardia/data/prodotto/vino-sforzato-di-valtellina-o-sfursat-di-valtellina-rosso>,
+    <https://w3id.org/italia/lombardia/data/prodotto/vino-valtellina-superiore-rosso>;
+  rdfs:label "Tipologia vino 'rosso'"@it .
+
+<https://w3id.org/italia/lombardia/data/tipo/vino-spumante> a upper:Tipologia, vino:TipologiaVino;
+  upper:siRiferisceA <https://w3id.org/italia/lombardia/data/prodotto/vino-franciacorta-spumante>,
+    <https://w3id.org/italia/lombardia/data/prodotto/vino-oltrepo-pavese-metodo-classico-spumante>;
+  rdfs:label "Tipologia vino 'spumante'"@it .

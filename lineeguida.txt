@@ -1,0 +1,25 @@
+multiple province -> multiple righe
+disegni ontologici da lodview cambiando namespace
+
+http://etna.istc.cnr.it/food/
+https://www.buonalombardia.regione.lombardia.it/wps/wcm/connect/bc92c0e0-27fa-4f86-875c-fa6d4716634d/PAT+Regione+Lombardia-2023.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-bc92c0e0-27fa-4f86-875c-fa6d4716634d-oQddXlK
+
+
+
+Maria Chiara Frangipane
+16:03
+https://www.buonalombardia.regione.lombardia.it/wps/wcm/connect/bc92c0e0-27fa-4f86-875c-fa6d4716634d/PAT+Regione+Lombardia-2023.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-bc92c0e0-27fa-4f86-875c-fa6d4716634d-oQddXlK
+Maria Chiara Frangipane
+16:12
+http://etna.istc.cnr.it/food/
+Maria Chiara Frangipane
+16:21
+https://w3id.org/italia/lombardia/data/
+http://w3id.org/food/ontology/disciplinare-vino/
+http://w3id.org/food/ontology/disciplinare-upper/
+Maria Chiara Frangipane
+16:24
+http://w3id.org/food/ontology/disciplinare-vino/Vino
+Maria Chiara Frangipane
+16:45
+https://www.buonalombardia.regione.lombardia.it/wps/wcm/connect/e9e233ff-ff18-407a-bfa1-7d1300798619/Vini+DOCG+Regione+Lombardia.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-e9e233ff-ff18-407a-bfa1-7d1300798619-mD9j2WN

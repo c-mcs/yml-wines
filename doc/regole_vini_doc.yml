@@ -1,0 +1,68 @@
+prefixes:
+  data: https://w3id.org/italia/lombardia/data/
+  vino: http://w3id.org/food/ontology/disciplinare-vino/
+  upper: http://w3id.org/food/ontology/disciplinare-upper/
+  fno: "https://w3id.org/imec/idlab/function#"
+  l0: "https://w3id.org/italia/onto/l0/"
+  den: "http://w3id.org/food/ontology/denominazione-italiana/"
+
+
+
+sources:
+  vino_source:
+    access: "vini_doc.csv" # https://www.buonalombardia.regione.lombardia.it/wps/wcm/connect/e9e233ff-ff18-407a-bfa1-7d1300798619/Vini+DOCG+Regione+Lombardia.pdf?MOD=AJPERES&CACHEID=ROOTWORKSPACE-e9e233ff-ff18-407a-bfa1-7d1300798619-mD9j2WN
+    referenceFormulation: "csv"
+
+mappings:
+  vino_mapping:
+    sources:
+      - vino_source
+    s:
+      function: fno:concat
+      parameters:
+        - [fno:str, "data:prodotto/vino-"]
+        - parameter: fno:otherStr
+          value: 
+            function: fno:slugify
+            parameters:
+            - [fno:str, "$(denominazione)"]
+      type: iri                                 
+    po:
+      - [a,"vino:Vino"]
+      - [a, "upper:Prodotto"]
+      - ["l0:name","Vino: $(denominazione)"]
+      - ["rdfs:label", "Vino: $(denominazione)",it~lang] # concatena le colonne nome e tipologia se ci sono
+      - ["rdfs:label", "Wine: $(denominazione)",en~lang] 
+       # vediamo se fare condition per tipologia in inglese
+      - p: "upper:haDenominazione"
+        o: 
+          function: fno:concat
+          parameters:
+            - [fno:str, "data:denominazione/vino-"]
+            - parameter: fno:otherStr
+              value: 
+                function: fno:slugify
+                parameters:
+                - [fno:str, "$(denominazione)"]
+          type: iri      
+
+  denominazione_mapping:
+    sources:
+      - vino_source
+    s:
+      function: fno:concat
+      parameters:
+        - [fno:str, "data:denominazione/vino-"]
+        - parameter: fno:otherStr
+          value: 
+            function: fno:slugify
+            parameters:
+            - [fno:str, "$(denominazione)"]
+      type: iri      
+    po:
+      - ["rdfs:label", "Denominazione $(menzione) vino '$(denominazione)'", it~lang]
+      - ["rdfs:label", "Wine $(menzione) protected name '$(denominazione)'", en~lang]
+      - ["upper:haLuogoDiProduzione", "data:province/$(provincia)~iri"]
+      - ["a", "den:DenominazioneOrigineControllata"] # splitta su provincia
+
+

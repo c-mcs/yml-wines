@@ -1,0 +1,168 @@
+@prefix : <http://mapping.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix data: <https://w3id.org/italia/lombardia/data/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix den: <http://w3id.org/food/ontology/denominazione-italiana/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/imec/idlab/function#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix upper: <http://w3id.org/food/ontology/disciplinare-upper/> .
+@prefix vino: <http://w3id.org/food/ontology/disciplinare-vino/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-alpi-retiche> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/SO>;
+  rdfs:label "Wine IGT protected name 'Alpi Retiche'"@en, "Denominazione IGT vino 'Alpi Retiche'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-alto-mincio> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/MN>;
+  rdfs:label "Wine IGT protected name 'Alto Mincio'"@en, "Denominazione IGT vino 'Alto Mincio'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-benaco-bresciano> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine IGT protected name 'Benaco Bresciano'"@en, "Denominazione IGT vino 'Benaco Bresciano'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-bergamasca> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BG>;
+  rdfs:label "Wine IGT protected name 'Bergamasca'"@en, "Denominazione IGT vino 'Bergamasca'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-collina-del-milanese> a
+    den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/LO>, <https://w3id.org/italia/lombardia/data/province/MI>,
+    <https://w3id.org/italia/lombardia/data/province/PV>;
+  rdfs:label "Wine IGT protected name 'Collina del Milanese'"@en, "Denominazione IGT vino 'Collina del Milanese'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-montenetto-di-brescia>
+  a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine IGT protected name 'Montenetto di Brescia'"@en, "Denominazione IGT vino 'Montenetto di Brescia'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-provincia-di-mantova> a
+    den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/MN>;
+  rdfs:label "Wine IGT protected name 'Provincia di Mantova'"@en, "Denominazione IGT vino 'Provincia di Mantova'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-provincia-di-pavia> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/PV>;
+  rdfs:label "Wine IGT protected name 'Provincia di Pavia'"@en, "Denominazione IGT vino 'Provincia di Pavia'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-quistello> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/MN>;
+  rdfs:label "Wine IGT protected name 'Quistello'"@en, "Denominazione IGT vino 'Quistello'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-ronchi-di-brescia> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine IGT protected name 'Ronchi di Brescia'"@en, "Denominazione IGT vino 'Ronchi di Brescia'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-ronchi-varesini> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/VA>;
+  rdfs:label "Wine IGT protected name 'Ronchi Varesini'"@en, "Denominazione IGT vino 'Ronchi Varesini'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-sabbioneta> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/MN>;
+  rdfs:label "Wine IGT protected name 'Sabbioneta'"@en, "Denominazione IGT vino 'Sabbioneta'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-sebino> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BG>;
+  rdfs:label "Wine IGT protected name 'Sebino'"@en, "Denominazione IGT vino 'Sebino'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-terre-lariane> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/CO>, <https://w3id.org/italia/lombardia/data/province/LC>;
+  rdfs:label "Wine IGT protected name 'Terre Lariane'"@en, "Denominazione IGT vino 'Terre Lariane'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-valcamonica> a den:IndicazioneGeograficaTipica;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine IGT protected name 'Valcamonica'"@en, "Denominazione IGT vino 'Valcamonica'"@it .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-alpi-retiche> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-alpi-retiche>;
+  rdfs:label "Wine: Alpi Retiche"@en, "Vino: Alpi Retiche"@it;
+  l0:name "Vino: Alpi Retiche" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-alto-mincio> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-alto-mincio>;
+  rdfs:label "Wine: Alto Mincio"@en, "Vino: Alto Mincio"@it;
+  l0:name "Vino: Alto Mincio" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-benaco-bresciano> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-benaco-bresciano>;
+  rdfs:label "Wine: Benaco Bresciano"@en, "Vino: Benaco Bresciano"@it;
+  l0:name "Vino: Benaco Bresciano" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-bergamasca> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-bergamasca>;
+  rdfs:label "Wine: Bergamasca"@en, "Vino: Bergamasca"@it;
+  l0:name "Vino: Bergamasca" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-collina-del-milanese> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-collina-del-milanese>;
+  rdfs:label "Wine: Collina del Milanese"@en, "Vino: Collina del Milanese"@it;
+  l0:name "Vino: Collina del Milanese" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-montenetto-di-brescia> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-montenetto-di-brescia>;
+  rdfs:label "Wine: Montenetto di Brescia"@en, "Vino: Montenetto di Brescia"@it;
+  l0:name "Vino: Montenetto di Brescia" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-provincia-di-mantova> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-provincia-di-mantova>;
+  rdfs:label "Wine: Provincia di Mantova"@en, "Vino: Provincia di Mantova"@it;
+  l0:name "Vino: Provincia di Mantova" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-provincia-di-pavia> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-provincia-di-pavia>;
+  rdfs:label "Wine: Provincia di Pavia"@en, "Vino: Provincia di Pavia"@it;
+  l0:name "Vino: Provincia di Pavia" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-quistello> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-quistello>;
+  rdfs:label "Wine: Quistello"@en, "Vino: Quistello"@it;
+  l0:name "Vino: Quistello" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-ronchi-di-brescia> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-ronchi-di-brescia>;
+  rdfs:label "Wine: Ronchi di Brescia"@en, "Vino: Ronchi di Brescia"@it;
+  l0:name "Vino: Ronchi di Brescia" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-ronchi-varesini> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-ronchi-varesini>;
+  rdfs:label "Wine: Ronchi Varesini"@en, "Vino: Ronchi Varesini"@it;
+  l0:name "Vino: Ronchi Varesini" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-sabbioneta> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-sabbioneta>;
+  rdfs:label "Wine: Sabbioneta"@en, "Vino: Sabbioneta"@it;
+  l0:name "Vino: Sabbioneta" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-sebino> a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-sebino>;
+  rdfs:label "Wine: Sebino"@en, "Vino: Sebino"@it;
+  l0:name "Vino: Sebino" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-terre-lariane> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-terre-lariane>;
+  rdfs:label "Wine: Terre Lariane"@en, "Vino: Terre Lariane"@it;
+  l0:name "Vino: Terre Lariane" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-valcamonica> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-valcamonica>;
+  rdfs:label "Wine: Valcamonica"@en, "Vino: Valcamonica"@it;
+  l0:name "Vino: Valcamonica" .

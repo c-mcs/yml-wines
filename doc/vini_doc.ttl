@@ -1,0 +1,240 @@
+@prefix : <http://mapping.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix data: <https://w3id.org/italia/lombardia/data/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix den: <http://w3id.org/food/ontology/denominazione-italiana/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/imec/idlab/function#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix upper: <http://w3id.org/food/ontology/disciplinare-upper/> .
+@prefix vino: <http://w3id.org/food/ontology/disciplinare-vino/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-bonarda-delloltrepo-pavese>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/PV>;
+  rdfs:label "Wine DOC protected name 'Bonarda dell’Oltrepò Pavese'"@en, "Denominazione DOC vino 'Bonarda dell’Oltrepò Pavese'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-botticino> a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine DOC protected name 'Botticino'"@en, "Denominazione DOC vino 'Botticino'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-buttafuoco-delloltrepo-pavese-o-buttafuoco>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/PV>;
+  rdfs:label "Wine DOC protected name 'Buttafuoco dell’Oltrepò Pavese o Buttafuoco'"@en,
+    "Denominazione DOC vino 'Buttafuoco dell’Oltrepò Pavese o Buttafuoco'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-capriano-del-colle> a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine DOC protected name 'Capriano del Colle'"@en, "Denominazione DOC vino 'Capriano del Colle'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-casteggio> a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/PV>;
+  rdfs:label "Wine DOC protected name 'Casteggio'"@en, "Denominazione DOC vino 'Casteggio'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-cellatica> a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine DOC protected name 'Cellatica'"@en, "Denominazione DOC vino 'Cellatica'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-curtefranca> a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine DOC protected name 'Curtefranca'"@en, "Denominazione DOC vino 'Curtefranca'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-garda> a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine DOC protected name 'Garda'"@en, "Denominazione DOC vino 'Garda'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-garda-colli-mantovani>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/MN>;
+  rdfs:label "Wine DOC protected name 'Garda Colli Mantovani'"@en, "Denominazione DOC vino 'Garda Colli Mantovani'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-lambrusco-mantovano> a
+    den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/MN>;
+  rdfs:label "Wine DOC protected name 'Lambrusco Mantovano'"@en, "Denominazione DOC vino 'Lambrusco Mantovano'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-lugana> a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/MN>;
+  rdfs:label "Wine DOC protected name 'Lugana'"@en, "Denominazione DOC vino 'Lugana'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-oltrepo-pavese> a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/PV>;
+  rdfs:label "Wine DOC protected name 'Oltrepò Pavese'"@en, "Denominazione DOC vino 'Oltrepò Pavese'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-oltrepo-pavese-pinot-grigio>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/PV>;
+  rdfs:label "Wine DOC protected name 'Oltrepò Pavese Pinot grigio'"@en, "Denominazione DOC vino 'Oltrepò Pavese Pinot grigio'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-pinot-nero-delloltrepo-pavese>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/PV>;
+  rdfs:label "Wine DOC protected name 'Pinot nero dell’Oltrepò Pavese'"@en, "Denominazione DOC vino 'Pinot nero dell’Oltrepò Pavese'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-riviera-del-garda-classico>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine DOC protected name 'Riviera del Garda Classico'"@en, "Denominazione DOC vino 'Riviera del Garda Classico'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-san-colombano-al-lambro-o-san-colombano>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/LO>, <https://w3id.org/italia/lombardia/data/province/MI>;
+  rdfs:label "Wine DOC protected name 'San Colombano al Lambro o San Colombano'"@en,
+    "Denominazione DOC vino 'San Colombano al Lambro o San Colombano'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-san-martino-della-battaglia>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BS>;
+  rdfs:label "Wine DOC protected name 'San Martino della Battaglia'"@en, "Denominazione DOC vino 'San Martino della Battaglia'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-sangue-di-giuda-delloltrepo-pavese-o-sangue-di-giuda>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/PV>;
+  rdfs:label "Wine DOC protected name '\"Sangue di Giuda dell’Oltrepò Pavese” o “Sangue di Giuda”'"@en,
+    "Denominazione DOC vino '\"Sangue di Giuda dell’Oltrepò Pavese” o “Sangue di Giuda”'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-terre-del-colleoni-o-colleoni>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BG>;
+  rdfs:label "Wine DOC protected name 'Terre del Colleoni o Colleoni'"@en, "Denominazione DOC vino 'Terre del Colleoni o Colleoni'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-valcalepio> a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/BG>;
+  rdfs:label "Wine DOC protected name 'Valcalepio'"@en, "Denominazione DOC vino 'Valcalepio'"@it .
+
+<https://w3id.org/italia/lombardia/data/denominazione/vino-valtellina-rosso-o-rosso-di-valtellina>
+  a den:DenominazioneOrigineControllata;
+  upper:haLuogoDiProduzione <https://w3id.org/italia/lombardia/data/province/SO>;
+  rdfs:label "Wine DOC protected name 'Valtellina Rosso o Rosso di Valtellina'"@en,
+    "Denominazione DOC vino 'Valtellina Rosso o Rosso di Valtellina'"@it .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-bonarda-delloltrepo-pavese>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-bonarda-delloltrepo-pavese>;
+  rdfs:label "Wine: Bonarda dell’Oltrepò Pavese"@en, "Vino: Bonarda dell’Oltrepò Pavese"@it;
+  l0:name "Vino: Bonarda dell’Oltrepò Pavese" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-botticino> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-botticino>;
+  rdfs:label "Wine: Botticino"@en, "Vino: Botticino"@it;
+  l0:name "Vino: Botticino" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-buttafuoco-delloltrepo-pavese-o-buttafuoco>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-buttafuoco-delloltrepo-pavese-o-buttafuoco>;
+  rdfs:label "Wine: Buttafuoco dell’Oltrepò Pavese o Buttafuoco"@en, "Vino: Buttafuoco dell’Oltrepò Pavese o Buttafuoco"@it;
+  l0:name "Vino: Buttafuoco dell’Oltrepò Pavese o Buttafuoco" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-capriano-del-colle> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-capriano-del-colle>;
+  rdfs:label "Wine: Capriano del Colle"@en, "Vino: Capriano del Colle"@it;
+  l0:name "Vino: Capriano del Colle" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-casteggio> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-casteggio>;
+  rdfs:label "Wine: Casteggio"@en, "Vino: Casteggio"@it;
+  l0:name "Vino: Casteggio" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-cellatica> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-cellatica>;
+  rdfs:label "Wine: Cellatica"@en, "Vino: Cellatica"@it;
+  l0:name "Vino: Cellatica" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-curtefranca> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-curtefranca>;
+  rdfs:label "Wine: Curtefranca"@en, "Vino: Curtefranca"@it;
+  l0:name "Vino: Curtefranca" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-garda> a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-garda>;
+  rdfs:label "Wine: Garda"@en, "Vino: Garda"@it;
+  l0:name "Vino: Garda" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-garda-colli-mantovani> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-garda-colli-mantovani>;
+  rdfs:label "Wine: Garda Colli Mantovani"@en, "Vino: Garda Colli Mantovani"@it;
+  l0:name "Vino: Garda Colli Mantovani" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-lambrusco-mantovano> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-lambrusco-mantovano>;
+  rdfs:label "Wine: Lambrusco Mantovano"@en, "Vino: Lambrusco Mantovano"@it;
+  l0:name "Vino: Lambrusco Mantovano" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-lugana> a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-lugana>;
+  rdfs:label "Wine: Lugana"@en, "Vino: Lugana"@it;
+  l0:name "Vino: Lugana" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-oltrepo-pavese> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-oltrepo-pavese>;
+  rdfs:label "Wine: Oltrepò Pavese"@en, "Vino: Oltrepò Pavese"@it;
+  l0:name "Vino: Oltrepò Pavese" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-oltrepo-pavese-pinot-grigio>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-oltrepo-pavese-pinot-grigio>;
+  rdfs:label "Wine: Oltrepò Pavese Pinot grigio"@en, "Vino: Oltrepò Pavese Pinot grigio"@it;
+  l0:name "Vino: Oltrepò Pavese Pinot grigio" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-pinot-nero-delloltrepo-pavese>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-pinot-nero-delloltrepo-pavese>;
+  rdfs:label "Wine: Pinot nero dell’Oltrepò Pavese"@en, "Vino: Pinot nero dell’Oltrepò Pavese"@it;
+  l0:name "Vino: Pinot nero dell’Oltrepò Pavese" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-riviera-del-garda-classico>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-riviera-del-garda-classico>;
+  rdfs:label "Wine: Riviera del Garda Classico"@en, "Vino: Riviera del Garda Classico"@it;
+  l0:name "Vino: Riviera del Garda Classico" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-san-colombano-al-lambro-o-san-colombano>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-san-colombano-al-lambro-o-san-colombano>;
+  rdfs:label "Wine: San Colombano al Lambro o San Colombano"@en, "Vino: San Colombano al Lambro o San Colombano"@it;
+  l0:name "Vino: San Colombano al Lambro o San Colombano" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-san-martino-della-battaglia>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-san-martino-della-battaglia>;
+  rdfs:label "Wine: San Martino della Battaglia"@en, "Vino: San Martino della Battaglia"@it;
+  l0:name "Vino: San Martino della Battaglia" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-sangue-di-giuda-delloltrepo-pavese-o-sangue-di-giuda>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-sangue-di-giuda-delloltrepo-pavese-o-sangue-di-giuda>;
+  rdfs:label "Wine: \"Sangue di Giuda dell’Oltrepò Pavese” o “Sangue di Giuda”"@en,
+    "Vino: \"Sangue di Giuda dell’Oltrepò Pavese” o “Sangue di Giuda”"@it;
+  l0:name "Vino: \"Sangue di Giuda dell’Oltrepò Pavese” o “Sangue di Giuda”" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-terre-del-colleoni-o-colleoni>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-terre-del-colleoni-o-colleoni>;
+  rdfs:label "Wine: Terre del Colleoni o Colleoni"@en, "Vino: Terre del Colleoni o Colleoni"@it;
+  l0:name "Vino: Terre del Colleoni o Colleoni" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-valcalepio> a upper:Prodotto,
+    vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-valcalepio>;
+  rdfs:label "Wine: Valcalepio"@en, "Vino: Valcalepio"@it;
+  l0:name "Vino: Valcalepio" .
+
+<https://w3id.org/italia/lombardia/data/prodotto/vino-valtellina-rosso-o-rosso-di-valtellina>
+  a upper:Prodotto, vino:Vino;
+  upper:haDenominazione <https://w3id.org/italia/lombardia/data/denominazione/vino-valtellina-rosso-o-rosso-di-valtellina>;
+  rdfs:label "Wine: Valtellina Rosso o Rosso di Valtellina"@en, "Vino: Valtellina Rosso o Rosso di Valtellina"@it;
+  l0:name "Vino: Valtellina Rosso o Rosso di Valtellina" .
